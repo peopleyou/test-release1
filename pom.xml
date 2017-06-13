@@ -3,7 +3,7 @@
 
     <groupId>com.maven.study</groupId>
     <artifactId>test-release</artifactId>
-    <version>1.6-SNAPSHOT</version>
+    <version>1.6</version>
     <packaging>jar</packaging>
     <name>test-release</name>
 
@@ -37,7 +37,7 @@
         <connection>scm:git:peopleyou@github.com/peopleyou/test-release1.git</connection>
         <developerConnection>scm:git:https://peopleyou@github.com/peopleyou/test-release1.git</developerConnection>
         <url>scm:git:peopleyou@github.com/peopleyou/test-release1/tree/master</url>
-        <tag>HEAD</tag>
+        <tag>test-release-1.6</tag>
     </scm>
 
     <build>
