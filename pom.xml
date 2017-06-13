@@ -34,7 +34,9 @@
     </distributionManagement>
 
     <scm>
-        <developerConnection>scm:git:https://peopleyou@github.com/peopleyou/test-release1</developerConnection>
+        <connection>https://github.com/peopleyou/test-release1</connection>
+        <developerConnection>scm:git:file://D:/intellij-workspace/maven-study/test-release</developerConnection>
+        <url>https://github.com/peopleyou/test-release1</url>
         <tag>HEAD</tag>
     </scm>
 
