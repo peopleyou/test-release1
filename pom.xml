@@ -3,7 +3,7 @@
 
     <groupId>com.maven.study</groupId>
     <artifactId>test-release</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.6-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>test-release</name>
 
@@ -67,19 +67,23 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-scm-plugin</artifactId>
-                    <configuration>
-                        <connectionType>developerConnection</connectionType>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
                     <configuration>
-                        <useReleaseProfile>false</useReleaseProfile>
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                        <providerImplementations>
+                            <git>jgit</git>
+                        </providerImplementations>
+                        <username>peopleyou</username>
+                        <password>bupt6272</password>
                         <tagBase>${project.artifactId}-${project.version}</tagBase>
+                        <goals>-f pom.xml deploy</goals>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.scm</groupId>
+                            <artifactId>maven-scm-provider-jgit</artifactId>
+                            <version>1.9.5</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
